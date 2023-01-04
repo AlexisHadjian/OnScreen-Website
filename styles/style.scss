@@ -6,27 +6,40 @@ Header
 --------------------------------------------------------------*/
 
 header {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
+    transition: .3s;
+    &.scroll {
+        background-color: var(--white);
+        --reverse_text_color: var(--black);
+        box-shadow: var(--shadow);
+        .site-header__left #logo {
+            background-image: url(../assets/img/logo-noir.png);
+        }
+
+    }
     .site-header {
         padding: 15px 0;
         transition: .3s;
         &__left {
-
+            #logo {
+                display: block;
+                background-image: url(../assets/img/logo-blanc.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                height: 60px;
+                width: 200px;
+            }
         }
         &__navigation {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
             gap: 40px;
+            justify-content: flex-end;
             ul {
-                display: flex;
-                justify-content: space-between;
                 padding: 0;
                 margin: 0;
                 li {
@@ -36,16 +49,8 @@ header {
                         position: relative;
                         transition: .3s;
                         padding: 20px;
-                        &:after {
-                            content: "";
-                            background-color: var(--text_color);
-                            position: absolute;
-                            transition: .3s;
-                            bottom: 15px;
-                            left: 20px;
-                            height: 2px;
-                            width: 0;
-                        }
+                        font-weight: var(--semibold);
+                        color: var(--reverse_text_color);
                         &:hover {
                             &:after {
                                 width: calc(100% - 40px);
@@ -64,13 +69,128 @@ Page
 
 /*------Hero------*/
 
-#hero {
+#hero-sec {
     height: 100vh;
-    background-image: linear-gradient(to right, var(--orange),var(--purple));
+    background-image: linear-gradient(to right, var(--purple),var(--orange));
+    .hero {
+        gap: 50px;
+        &__left {
+            color: var(--white);
+            a {
+                margin-top: 20px;
+            }
+        }
+        &__right {
+            background-image: url(../assets/img/hero-illu.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 700px;
+        }
+    }
 }
 
 
 /*------Service------*/
+
+#services {
+    .wrapper {
+        h3 {
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 100px;
+            &__single {
+                background-color: var(--white);
+                box-shadow: var(--shadow_light);
+                border-radius: var(--radius);
+                padding: 40px;
+                transition: .3s;
+                &:hover {
+                    box-shadow: var(--shadow);
+                }
+                &__picto {
+                    background-color: var(--orange);
+                    border-radius: var(--radius_small);
+                    width: 70px;
+                    height: 70px;
+                    background-repeat: no-repeat;
+                    background-size: 50px;
+                    background-position: center;
+                    &.design {
+                        background-image: url(../assets/img/palette.svg);
+                    }
+                    &.developpement {
+                        background-image: url(../assets/img/code.svg);
+                    }
+                    &.marketing {
+                        background-image: url(../assets/img/target-arrow.svg);
+                    }
+                }
+                &__title {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+/*------Projects------*/
+
+#projects {
+    margin-top: 200px;
+    .projects {
+        background-color: var(--purple_light);
+        border-radius: var(--radius_small);
+        padding: 50px;
+        &__left {
+
+        }
+        &__right {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-left: 50px;
+            &__single {
+                background-color: var(--white);
+                box-shadow: var(--shadow_light);
+                border-radius: var(--radius_small);
+                height: 100px;
+                background-image: url(../assets/img/apple-logo.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 120px;
+            }
+        }
+    }
+}
+
+
+/*------Contact------*/
+
+#contact {
+    margin-top: 200px;
+    .contact {
+        align-items: flex-start;
+        &__left {
+            padding-right: 100px;
+            &__socials {
+                justify-content: flex-start;
+                margin-top: 40px;
+                gap: 20px;
+            }
+        }
+        &__right {
+
+        }
+    }
+}
 
 
 /*--------------------------------------------------------------
@@ -78,5 +198,35 @@ Footer
 --------------------------------------------------------------*/
 
 footer {
-    
+    .site-footer {
+        &__top {
+            padding: 20px 0;
+            gap: 50px;
+            align-items: flex-start;
+            h4 {
+                margin-top: 0;
+                font-size: 20px;
+            }
+            p,a {
+                color: #717171;
+            }
+            #logo {
+                display: block;
+                background-image: url(../assets/img/logo-noir.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                height: 60px;
+                width: 200px;
+            }
+        }
+        &__bottom {
+            border-top: 0.5px solid #c3c3c3;
+            p {
+                text-align: center;
+                font-size: 14px;
+                color: #c3c3c3;
+            }
+        } 
+    }
 }
