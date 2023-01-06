@@ -493,11 +493,9 @@ Page
   height: 100vh;
   background-image: linear-gradient(to right, var(--purple), var(--orange));
 }
-#hero-sec .hero {
-  gap: 50px;
-}
 #hero-sec .hero__left {
   color: var(--white);
+  padding-right: 100px;
 }
 #hero-sec .hero__left a {
   margin-top: 20px;
