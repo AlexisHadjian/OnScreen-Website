@@ -36,4 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
+    const hiddenBlocs = document.querySelectorAll('.hidden_bloc');
+    hiddenBlocs.forEach((el) => observer.observe(el));
+
 });

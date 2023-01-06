@@ -329,6 +329,12 @@ Animations
 
 .show {
   opacity: 1;
+  translate: 0 !important;
+}
+
+.hidden_bloc {
+  transition: all 2s;
+  translate: 0 50px;
 }
 
 /*--------------------------------------------------------------
@@ -525,7 +531,6 @@ Page
   box-shadow: var(--shadow_light);
   border-radius: var(--radius);
   padding: 40px;
-  transition: 0.3s;
 }
 #services .wrapper .services__single:hover {
   box-shadow: var(--shadow);
@@ -572,10 +577,27 @@ Page
   box-shadow: var(--shadow_light);
   border-radius: var(--radius_small);
   height: 100px;
-  background-image: url(../assets/img/apple-logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120px;
+}
+#projects .projects__right__single:nth-child(1) {
+  background-image: url(../assets/img/logo-project/apple-logo.png);
+}
+#projects .projects__right__single:nth-child(2) {
+  background-image: url(../assets/img/logo-project/coca-logo.png);
+}
+#projects .projects__right__single:nth-child(3) {
+  background-image: url(../assets/img/logo-project/renault-logo.png);
+}
+#projects .projects__right__single:nth-child(4) {
+  background-image: url(../assets/img/logo-project/nike-logo.png);
+}
+#projects .projects__right__single:nth-child(5) {
+  background-image: url(../assets/img/logo-project/audi-logo.png);
+}
+#projects .projects__right__single:nth-child(6) {
+  background-image: url(../assets/img/logo-project/puma-logo.png);
 }
 
 /*------Contact------*/

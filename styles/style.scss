@@ -110,7 +110,6 @@ Page
                 box-shadow: var(--shadow_light);
                 border-radius: var(--radius);
                 padding: 40px;
-                transition: .3s;
                 &:hover {
                     box-shadow: var(--shadow);
                 }
@@ -162,10 +161,27 @@ Page
                 box-shadow: var(--shadow_light);
                 border-radius: var(--radius_small);
                 height: 100px;
-                background-image: url(../assets/img/apple-logo.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 120px;
+                &:nth-child(1) {
+                    background-image: url(../assets/img/logo-project/apple-logo.png);
+                }
+                &:nth-child(2) {
+                    background-image: url(../assets/img/logo-project/coca-logo.png);
+                }
+                &:nth-child(3) {
+                    background-image: url(../assets/img/logo-project/renault-logo.png);
+                }
+                &:nth-child(4) {
+                    background-image: url(../assets/img/logo-project/nike-logo.png);
+                }
+                &:nth-child(5) {
+                    background-image: url(../assets/img/logo-project/audi-logo.png);
+                }
+                &:nth-child(6) {
+                    background-image: url(../assets/img/logo-project/puma-logo.png);
+                }
             }
         }
     }
